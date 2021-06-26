@@ -131,6 +131,7 @@ export function Home(){
                         onPress={handleAppointmentDetails}
                     />
                 )}
+                contentContainerStyle={{paddingBottom: 69}}
                 ItemSeparatorComponent={()=> <ListDivider/>}
                 style = {styles.matches}
                 showsVerticalScrollIndicator ={false}
