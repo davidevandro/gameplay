@@ -24,7 +24,7 @@ export type AppointmentProps = {
 }
 
 
-type Props = {
+type Props = RectButtonProps & {
     data: AppointmentProps;
 }
 
