@@ -1,12 +1,12 @@
 import React, {createContext, ReactNode, useContext, useState} from 'react';
 import * as AuthSession from 'expo-auth-session';
-import {
-    REDIRECT_URI,
-    SCOPE,
-    RESPONSE_TYPE,
-    CLIENT_ID,
-    CDN_IMAGE
-} from '../configs';
+
+const {REDIRECT_URI} = process.env;
+const {SCOPE} = process.env;
+const {RESPONSE_TYPE} = process.env;
+const {CLIENT_ID} = process.env;
+const {CDN_IMAGE}= process.env;
+
 
 import {api} from '../services/api';
 
@@ -52,12 +52,11 @@ function AuthProvider({children}: AuthProviderProps){
             .startAsync({ authUrl}) as AuthorizationResponse;
             
             console.log(type);
-            if (type==="success"){
+            if (type==="success" && !params.error){
                 api.defaults.headers.authorization = `Bearer ${params.access_token}`;
 
                 const userInfo = await api.get('/users/@me');
-                
-                console.log(userInfo);
+
                 const firstName = userInfo.data.username.split(' ')[0];
                 userInfo.data.avatar =  `${CDN_IMAGE}/avatars/${userInfo.data.id}/${userInfo.data.avatar}.png`; 
 
@@ -66,15 +65,11 @@ function AuthProvider({children}: AuthProviderProps){
                     firstName,
                     token: params.access_token
                 });
-
-                setLoading(false);
-            } else{
-                setLoading(false);
-            }
-            
-
+            }    
         } catch {
             throw new Error('Não foi possível autenticar');
+        } finally {
+            setLoading(false);
         }
     }
 
