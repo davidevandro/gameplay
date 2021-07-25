@@ -1,13 +1,22 @@
 
 # GamePlay  <img src = "https://img.shields.io/badge/license-MIT-blue">
 
+## Table of Contents
 
-## 💻 Description
+* [Description](#description)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Layout](#layout)
+* [How to Use](#how-to-use)
+* [Acknowledgements](#acknowlegments)
+* [License](#license)
+
+## Description
 
 An application to help you organize your gameplays with your friends, strengthening your relations and providing fun times. 
 It allows you to create groups to play your favorite games with your friends, using Discord authentication.
 
-## 🛠 Features
+## Features
 
 - [x] Social Authentication OAuth2 with Discord server
 - [x] Get user profile from Discord (username and avatar)
@@ -18,7 +27,7 @@ It allows you to create groups to play your favorite games with your friends, us
 - [x] Share the invite to join the user's server
 - [x] Log out
 
-## ✨ Technologies
+## Technologies
 
 - [x] [React Native](https://reactnative.dev/)
 - [x] [Typescript](https://www.typescriptlang.org/)
@@ -37,11 +46,11 @@ It allows you to create groups to play your favorite games with your friends, us
 - [x] [React Native Share](https://github.com/react-native-share/react-native-share)
 - [x] Deep Link
 
-## 🔖 Layout
+## Layout
 
 You can visualize the project layout in [this link](https://www.figma.com/file/0kv33XYjvOgvKGKHBaiR07/GamePlay---NLW-Together?node-id=58913%3A83). It's necessary to have an account on [Figma](https://www.figma.com/) to access it.
 
-## 👉🏼 How to Use
+## How to Use
 
 To clone and run this application, you'll need to install the following tools: [Git](https://git-scm.com), [Node.js v14.17](https://nodejs.org/en/) or higher, [Yarn v1.22](https://yarnpkg.com/) or higher + [Expo v3.28](https://expo.dev/) or higher. 
 Furthermore, it's recomended that you have a good editor to code like [VSCode](https://code.visualstudio.com/).
@@ -72,13 +81,13 @@ CLIENT_ID =
 CDN_IMAGE = 
 ```
 
-## 🤝 Acknowlegments
+## Acknowlegments
 
 This project was developed during the Next Level Week Together from [Rocketseat](https://rocketseat.com.br/).
 
 Special thanks to [Rodrigo Gonçalves](https://github.com/rodrigorgtic), he was the developer who guide me to develop this app.
 
-## 📄 License
+## License
 
 This project is under license [MIT](https://github.com/davidevandro/gameplay/blob/main/LICENSE).
 
